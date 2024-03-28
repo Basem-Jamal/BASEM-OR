@@ -1,5 +1,26 @@
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital@1&display=swap');
 
+
+:root {
+    --main-color: #1c1941;
+    --secondary-color: #2c4755;
+    --section-padding: 60px;
+    --section0background:#f6f6f6;
+  }
+
+  video {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -1000;
+}
+
+
+  
 *{
     font-family: "Ubuntu", sans-serif;
     padding: 0;
@@ -127,12 +148,12 @@ ul a:after {
     width: 100%;
     height: 100%;
     display: flex;
-        justify-content: space-around;
-        /* لتوزيع البطاقات بالتساوي */
-        align-items: center;
-        /* لتوسيط البطاقات عمودياً */
-        flex-wrap: nowrap;
-        /* لمنع البطاقات من التحول إلى السطر التالي */}
+    justify-content: space-around;
+    /* لتوزيع البطاقات بالتساوي */
+    align-items: center;
+    /* لتوسيط البطاقات عمودياً */
+    flex-wrap: nowrap;
+    /* لمنع البطاقات من التحول إلى السطر التالي */}
 
 
 .title1{
@@ -219,3 +240,130 @@ a:hover {
     opacity: 0.7;
 }
 
+/* Start About */
+.container3 {
+    position: relative;
+    top: 80px;
+    padding-top: 10px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    /* لتوزيع البطاقات بالتساوي */
+    align-items: center;
+    /* لتوسيط البطاقات عمودياً */
+    flex-wrap: nowrap;
+    /* لمنع البطاقات من التحول إلى السطر التالي */
+}
+
+/* Start-Components */
+.special-heading {
+    position: absolute;
+    color: #ebeced;
+    font-size: 100px;
+    font-weight: 800;
+    text-align: center;
+    line-height: -3px;
+    margin: 0;
+  }
+  .special-heading + p {
+    margin: -30px 0 0;
+    font-size: 20px;
+    text-align: center;
+    color: #797979;
+  }
+  @media (max-width: 767px) {
+     .special-heading {
+      font-size: 60px;
+     }
+     .special-heading + p {
+      margin-top: -20px;
+     }
+  
+  }
+  /* End-Components */
+  
+
+  
+  .container3 .about-content {
+    margin-top: 100px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  @media (max-width:991px) {
+    .container3 .about-content {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+  }
+  
+  .container3 .about-content .image {
+    position: relative;
+    width: 250px;
+    height: 375px;
+  }
+  @media (max-width:991px) {
+    .container3 .about-content .image {
+      margin: 0 auto 60px;
+    }
+   
+  }
+  
+  .container3 .about-content .image::before {
+    content: "";
+    position: absolute;
+    background-color: #ebeced;
+    width: 100px;
+    height: calc(100% + 80px);
+    top: -40px;
+    left: -20px;
+    z-index: -1;
+  }
+  .container3 .about-content .image::after {
+    top: -40px;
+    content: "";
+    position: absolute;
+    width: 120px;
+    height: 300px;
+      
+      
+    border-left: 80px solid #9198e5 ;
+    border-bottom: 80px solid var(--main-color);
+    z-index: -1;
+    right: -150px;
+  }
+  @media (max-width: 991px) {
+    .container3 .about-content .image::before,
+    .about .about-content .image::after {
+      display: none;
+    }
+  }
+  
+  
+  .container3 .about-content .imgaes , img{
+    max-width: 250px;
+  }
+  .container3 .about-content .text {
+    flex-basis: calc(100% - 500px);
+  }
+  .container3 .about-content .text p:first-of-type {
+    font-weight: bold;
+    line-height: 2;
+    margin-bottom: 50px;
+  }
+  .container3 .about-content .text hr {
+    width: 50%;
+    display: inline-block;
+    border-color: var(--main-color);
+  }
+  .container3 .about-content .text p:last-of-type {
+    line-height: 2;
+    color: #777;
+    
+  }
+  
+
+  /* End About */
+  
